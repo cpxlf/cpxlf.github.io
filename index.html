@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>茶飘香最新地址</title>
+</head>
+<body>
+  <h1>茶飘香最新地址</h1>
+  
+  <form>
+    <label for="url">输入要检查的网址：</label>
+    <br>
+    <input id="url" type="text" name="url">
+    <br><br>
+    <button type="button" onclick="checkUrl()">检查</button>
+  </form>
+  
+  <p id="result"></p>
+  
+  <script>
+    function checkUrl() {
+      var url = document.getElementById("url").value;
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("result").innerHTML = url + " 是可用的";
+        } else {
+          document.getElementById("result").innerHTML = url + " 是不可用的";
+        }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+  </script>
+  
+</body>
+</html>
