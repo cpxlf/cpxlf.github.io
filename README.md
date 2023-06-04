@@ -3,3 +3,5 @@
 https://www.cpxlf.com (永久地址，如不能访问请翻墙)
 
 https://www.cpx68.com
+
+https://www.cpxlf.lol
